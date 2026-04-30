@@ -34,3 +34,26 @@ document
     el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
     observer.observe(el);
   });
+function openPhoto(src, caption) {
+  document.getElementById("photo-modal-img").src = src;
+  document.getElementById("photo-modal-caption").textContent = caption;
+  document.getElementById("photo-modal").classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closePhoto() {
+  document.getElementById("photo-modal").classList.remove("active");
+  document.getElementById("photo-modal-img").src = "";
+  document.body.style.overflow = "";
+}
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    // close game modal
+    document.getElementById("game-modal").classList.remove("active");
+    document.getElementById("game-frame").src = "";
+    // close photo modal
+    document.getElementById("photo-modal").classList.remove("active");
+    document.getElementById("photo-modal-img").src = "";
+    document.body.style.overflow = "";
+  }
+});

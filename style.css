@@ -351,6 +351,61 @@ nav {
 .ring2 { width: 460px; height: 460px; opacity: 0.15; }
 .ring3 { width: 620px; height: 620px; opacity: 0.08; }
 
+/* ── PHOTO POPUP MODAL ── */
+#photo-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+#photo-modal.active { display: flex; }
+
+#photo-modal-inner {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+#photo-modal-img {
+  max-width: 90vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+}
+
+#photo-modal-caption {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+#photo-close {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
 /* ── SECTIONS COMMON ── */
 section {
   padding: 88px 10%;

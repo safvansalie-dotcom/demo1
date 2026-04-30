@@ -167,52 +167,43 @@
     </section>
 
     <!-- ── LIFE / ADVENTURE PHOTOS ── -->
-    <section id="life">
-      <h2>Life Beyond Work</h2>
-      <div class="section-line"></div>
-      <p class="life-intro">
-        When I'm not coordinating projects, you'll find me out exploring.
-      </p>
-      <div class="photo-grid">
-        <!-- Replace these src values with your actual adventure/lifestyle photos -->
-        <div class="photo-card tall">
-          <img
-            src="ADV.jpg"
-            alt="Adventure"
-            onerror="this.parentElement.classList.add('photo-empty')"
-          />
-          <!-- iv class="photo-empty-label">Add a photo 📸</div> -->
-          <div class="photo-overlay"><span>Exploring 🌿</span></div>
-        </div>
-        <div class="photo-card">
-          <img
-            src="ADV2.jpg"
-            alt="Adventure"
-            onerror="this.parentElement.classList.add('photo-empty')"
-          />
-          <!-- <div class="photo-empty-label">Add a photo 📸</div> -->
-          <div class="photo-overlay"><span>Adventures 🏔️</span></div>
-        </div>
-        <div class="photo-card">
-          <img
-            src="adventure3.jpg"
-            alt="Adventure"
-            onerror="this.parentElement.classList.add('photo-empty')"
-          />
-          <div class="photo-empty-label">Add a photo 📸</div>
-          <div class="photo-overlay"><span>Good vibes ✨</span></div>
-        </div>
-        <div class="photo-card tall">
-          <img
-            src="adventure4.jpg"
-            alt="Adventure"
-            onerror="this.parentElement.classList.add('photo-empty')"
-          />
-          <div class="photo-empty-label">Add a photo 📸</div>
-          <div class="photo-overlay"><span>Out & about 🌊</span></div>
-        </div>
-      </div>
-    </section>
+    <<!-- ── LIFE / ADVENTURE PHOTOS ── -->
+<section id="life">
+  <h2>Life Beyond Work</h2>
+  <div class="section-line"></div>
+  <p class="life-intro">When I'm not coordinating projects, you'll find me out exploring.</p>
+  <div class="photo-grid">
+    <div class="photo-card tall" onclick="openPhoto('ADV.jpg', 'Exploring 🌿 - Munnar')">
+      <img src="ADV.jpg" alt="Adventure" onerror="this.parentElement.classList.add('photo-empty')" />
+      <!-- <div class="photo-empty-label">Add a photo 📸</div> -->
+      <div class="photo-overlay"><span>Exploring 🌿 - Munnar </span></div>
+    </div>
+    <div class="photo-card" onclick="openPhoto('ADV2.jpg', 'Adventures 🏔️ - Vattavada ')">
+      <img src="ADV2.jpg" alt="Adventure" onerror="this.parentElement.classList.add('photo-empty')" />
+      <!-- <div class="photo-empty-label">Add a photo 📸</div> -->
+      <div class="photo-overlay"><span>Adventures 🏔️ - Vattavada </span></div>
+    </div>
+    <div class="photo-card" onclick="openPhoto('ADV3.jpg', 'My Team ✨ Duff Mutt')">
+      <img src="ADV3.jpg" alt="Adventure" onerror="this.parentElement.classList.add('photo-empty')" />
+      <!-- <div class="photo-empty-label">Add a photo 📸</div> -->
+      <div class="photo-overlay"><span> My Team ✨ Duff Mutt </span></div>
+    </div>
+    <div class="photo-card tall" onclick="openPhoto('adventure4.jpg', 'Out & about 🌊')">
+      <img src="adventure4.jpg" alt="Adventure" onerror="this.parentElement.classList.add('photo-empty')" />
+      <div class="photo-empty-label">Add a photo 📸</div>
+      <div class="photo-overlay"><span>Out & about 🌊</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO POPUP MODAL -->
+<div id="photo-modal" onclick="closePhoto()">
+  <div id="photo-modal-inner" onclick="event.stopPropagation()">
+    <button id="photo-close" onclick="closePhoto()">✕</button>
+    <img id="photo-modal-img" src="" alt="" />
+    <div id="photo-modal-caption"></div>
+  </div>
+</div>
 
     <!-- ── SKILLS ── -->
     <section id="skills">
