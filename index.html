@@ -12,7 +12,7 @@
   </head>
   <body>
     <!-- ── CONTACT BAR (always visible) ── -->
-    <div class="contact-bar">
+    <!-- <div class="contact-bar">
       <a href="tel:+918075260214" class="cbar-item">
         <span class="cbar-icon">📞</span>
         <span class="cbar-text">+91 80752 60214</span>
@@ -31,7 +31,7 @@
         <span class="cbar-icon">💼</span>
         <span class="cbar-text cbar-hide-sm">LinkedIn</span>
       </a>
-    </div>
+    </div> -->
 
     <!-- ── NAV ── -->
     <nav>
@@ -62,62 +62,65 @@
 
     <!-- ── HERO ── -->
     <section id="hero">
-      <div class="hero-inner">
-        <div class="badge">&#x2022; Open to Opportunities</div>
+     <div class="hero-inner">
 
-        <!-- PHOTO — replace src with your actual photo -->
-        <div class="hero-photo-wrap">
-          <div class="hero-photo">
-            <img
-              src="photo.jpg"
-              alt="Safvan"
-              onerror="
-                this.style.display = 'none';
-                this.parentElement.classList.add('photo-placeholder');
-              "
-            />
-            <!-- <div class="photo-fallback">S</div> -->
-          </div>
-          <div class="hero-photo-ring"></div>
-        </div>
+  <!-- LEFT SIDE (TEXT) -->
+  <div class="hero-left">
+    <div class="badge">&#x2022; Open to Opportunities</div>
 
-        <h1>Hey, I'm<br /><span>Safvan</span> 👋</h1>
-        <p class="tagline">
-          MBA Candidate · Business Analytics & Finance · Project Coordinator
-        </p>
-        <p class="hero-desc">
-          Detail-oriented project management professional with 1+ years of
-          experience managing full lifecycle application processes, stakeholder
-          communication, and compliance documentation.
-        </p>
-        <div class="hero-btns">
-          <a href="#projects" class="btn-primary">View Projects</a>
-          <a href="#contact" class="btn-secondary">Get In Touch</a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-num">1+</span
-            ><span class="stat-label">Years Experience</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-num">2</span
-            ><span class="stat-label">Roles Held</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-num">4x</span
-            ><span class="stat-label">Award Winner</span>
-          </div>
-        </div>
+    <h1>Hey, I'm<br /><span>Safvan</span> 👋</h1>
+
+    <p class="tagline">
+      MBA Graduate · Business Analytics & Finance ·
+    </p>
+
+    <p class="hero-desc">
+      Detail-oriented project management professional with 1+ years of
+      experience managing full lifecycle application processes, stakeholder
+      communication, and compliance documentation.
+    </p>
+
+    <div class="hero-btns">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="#contact" class="btn-secondary">Get In Touch</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">1+</span>
+        <span class="stat-label">Years Experience</span>
       </div>
-      <div class="hero-deco">
-        <div class="deco-ring ring1"></div>
-        <div class="deco-ring ring2"></div>
-        <div class="deco-ring ring3"></div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">2</span>
+        <span class="stat-label">Roles Held</span>
       </div>
-    </section>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">4x</span>
+        <span class="stat-label">Award Winner</span>
+      </div>
+    </div>
+  </div>
 
+  <!-- RIGHT SIDE (PHOTO) -->
+  <div class="hero-right">
+    <div class="hero-photo-wrap">
+      <div class="hero-photo">
+        <img
+          src="photo.jpg"
+          alt="Safvan"
+          onerror="
+            this.style.display = 'none';
+            this.parentElement.classList.add('photo-placeholder');
+          "
+        />
+      </div>
+      <div class="hero-photo-ring"></div>
+    </div>
+  </div>
+</section>
+</div>
     <!-- ── ABOUT ── -->
     <section id="about">
       <div class="about-inner">
@@ -166,8 +169,8 @@
       </div>
     </section>
 
+  
     <!-- ── LIFE / ADVENTURE PHOTOS ── -->
-    <<!-- ── LIFE / ADVENTURE PHOTOS ── -->
 <section id="life">
   <h2>Life Beyond Work</h2>
   <div class="section-line"></div>
@@ -188,13 +191,21 @@
       <!-- <div class="photo-empty-label">Add a photo 📸</div> -->
       <div class="photo-overlay"><span> My Team ✨ Duff Mutt </span></div>
     </div>
-    <div class="photo-card tall" onclick="openPhoto('adventure4.jpg', 'Out & about 🌊')">
-      <img src="adventure4.jpg" alt="Adventure" onerror="this.parentElement.classList.add('photo-empty')" />
-      <div class="photo-empty-label">Add a photo 📸</div>
-      <div class="photo-overlay"><span>Out & about 🌊</span></div>
-    </div>
+    <div class="photo-card tall" onclick="openPhoto('adventure4.mp4', 'Out & about 🌊')">
+      <!-- video playing  -->
+  <video autoplay muted loop playsinline>
+    <source src="ADV4.mp4" type="video/mp4">
+  </video>
+
+  <div class="photo-overlay">
+    <span>Out & about 🌊</span>
+  </div>
+
+</div>
   </div>
 </section>
+
+<!-- PHOTO POPUP MODAL -->
 
 <!-- PHOTO POPUP MODAL -->
 <div id="photo-modal" onclick="closePhoto()">
@@ -204,37 +215,6 @@
     <div id="photo-modal-caption"></div>
   </div>
 </div>
-
-    <!-- ── SKILLS ── -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="section-line"></div>
-      <div class="skills-categories">
-        <div class="skill-group">
-          <div class="skill-group-title">Project Management</div>
-          <div class="skills-grid">
-            <span>Council Application Management</span>
-            <span>End-to-End Process Coordination</span>
-            <span>Project Lifecycle Management</span>
-            <span>Risk Identification & Escalation</span>
-            <span>Timeline & Register Maintenance</span>
-            <span>Status Reporting</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <div class="skill-group-title">Communication & Compliance</div>
-          <div class="skills-grid">
-            <span>Stakeholder Communication</span>
-            <span>Regulatory Compliance</span>
-            <span>Documentation & Records</span>
-            <span>RFI Management</span>
-            <span>Proactive Problem-Solving</span>
-            <span>Multi-task & Priority Management</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ── PROJECTS ── -->
     <section id="projects">
       <h2>Projects</h2>
