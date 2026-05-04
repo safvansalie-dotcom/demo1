@@ -1039,7 +1039,7 @@ footer {
 
   .hero-photo { width: 80px; height: 80px; }
 
-  section { padding: 56px 6%; }
+  section { padding: 56px 6%; } 
   section h2 { font-size: 28px; }
 
   .about-inner { grid-template-columns: 1fr; gap: 28px; }
