@@ -220,12 +220,19 @@ nav {
 
 .hero-photo-ring {
   position: absolute;
-  inset: -6px;
+  inset: -12px;
   border-radius: 50%;
-  border: 1px dashed var(--accent);
-  opacity: 0.4;
   z-index: 1;
-  animation: spin 10s linear infinite;
+  animation: spin 2.5s linear infinite;
+  background: conic-gradient(
+    var(--accent) 0deg,
+    var(--accent) 90deg,
+    transparent 90deg,
+    transparent 360deg
+  );
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), black calc(100% - 3px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 3px), black calc(100% - 3px));
+  filter: drop-shadow(0 0 6px var(--accent));
 }
 
 @keyframes spin {
@@ -1012,13 +1019,13 @@ footer {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
-  body { padding-top: 36px; }
+  body { padding-top: 0px; }
 
   .contact-bar { justify-content: space-around; padding: 0 8px; }
   .cbar-item { padding: 0 8px; font-size: 11px; gap: 4px; }
   .cbar-hide-sm { display: none; }
 
-  nav { padding: 14px 20px; top: 36px; }
+  nav { padding: 14px 20px; top: 0px; }
   .nav-links { display: none; }
   .hamburger { display: flex; }
 
