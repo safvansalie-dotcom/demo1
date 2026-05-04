@@ -626,11 +626,13 @@ section h2 {
   border-radius: 14px;
   padding: 26px;
   transition: transform 0.3s, border-color 0.3s;
+  
 }
 
 .card:hover {
   transform: translateY(-6px);
   border-color: var(--accent);
+  
 }
 
 .card-placeholder { opacity: 0.5; }
